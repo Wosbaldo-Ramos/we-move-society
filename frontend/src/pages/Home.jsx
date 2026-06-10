@@ -204,6 +204,90 @@ function Home() {
           ))}
         </div>
       </section>
+          
+          {/* PRÓXIMAS ACTIVIDADES */}
+      <section style={{ padding: '2rem' }}>
+        <h2 style={{
+          fontSize: '20px',
+          fontWeight: '900',
+          background: 'var(--gradient-we)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          margin: '0 0 4px',
+        }}>
+          Próximas actividades
+        </h2>
+        <p style={{ fontSize: '13px', color: '#888', margin: '0 0 1.2rem' }}>
+          Reserva tu plaza antes de que se llene
+        </p>
+
+        {[
+          { day: '14', month: 'Jun', badge: 'WE Run', name: 'Ruta Cala Molins · 8km', info: 'Sant Feliu · 8:00h · 12 plazas', price: '6€', color: '#F04040' },
+          { day: '19', month: 'Jun', badge: 'WE Hit', name: 'Sesión funcional · Parque', info: 'Sant Feliu · 9:00h · 15 plazas', price: '7€', color: '#E07020' },
+          { day: '21', month: 'Jun', badge: 'WE Jump', name: 'Jump cardio · Playa', info: 'Passeig del Mar · 7:30h · 20 plazas', price: '5€', color: '#C060D0' },
+        ].map((ev) => (
+          <div key={ev.day + ev.badge} style={{
+            background: '#fff',
+            borderRadius: 'var(--radius-md)',
+            border: '0.5px solid #e0e0e0',
+            padding: '1rem 1.2rem',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '14px',
+            marginBottom: '10px',
+          }}>
+            {/* Fecha */}
+            <div style={{
+              background: ev.color,
+              color: '#fff',
+              borderRadius: '10px',
+              padding: '6px 10px',
+              textAlign: 'center',
+              minWidth: '44px',
+            }}>
+              <div style={{ fontSize: '20px', fontWeight: '900', lineHeight: 1 }}>{ev.day}</div>
+              <div style={{ fontSize: '10px', fontWeight: '700', textTransform: 'uppercase' }}>{ev.month}</div>
+            </div>
+
+            {/* Info */}
+            <div style={{ flex: 1 }}>
+              <span style={{
+                display: 'inline-block',
+                background: 'var(--color-cream)',
+                color: ev.color,
+                borderRadius: '20px',
+                fontSize: '11px',
+                fontWeight: '700',
+                padding: '2px 10px',
+                border: `1px solid var(--color-border)`,
+                marginBottom: '4px',
+              }}>
+                {ev.badge}
+              </span>
+              <p style={{ fontSize: '14px', fontWeight: '700', margin: '0 0 2px', color: '#333' }}>{ev.name}</p>
+              <p style={{ fontSize: '12px', color: '#888', margin: 0 }}>{ev.info}</p>
+            </div>
+
+            {/* Precio y botón */}
+            <div style={{ textAlign: 'right' }}>
+              <p style={{ fontSize: '13px', fontWeight: '700', color: '#C060D0', margin: '0 0 4px' }}>{ev.price}</p>
+              <button style={{
+                background: ev.color,
+                color: '#fff',
+                border: 'none',
+                borderRadius: '30px',
+                padding: '7px 16px',
+                fontSize: '12px',
+                fontWeight: '700',
+                cursor: 'pointer',
+                fontFamily: 'inherit',
+              }}>
+                Reservar
+              </button>
+            </div>
+          </div>
+        ))}
+      </section>
       
     </main>
   )
