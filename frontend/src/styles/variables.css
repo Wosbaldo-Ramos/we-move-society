@@ -1,0 +1,17 @@
+:root {
+  --color-cream: #FAF0EC;
+  --color-coral: #F04040;
+  --color-pink: #F06090;
+  --color-purple: #C060D0;
+  --color-coral-dark: #C03030;
+  --color-border: #F0C0B0;
+
+  --gradient-we: linear-gradient(135deg, #F06090, #C060D0);
+
+  --font-main: 'Nunito', sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 40px;
+}
