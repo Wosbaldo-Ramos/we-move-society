@@ -288,6 +288,136 @@ function Home() {
           </div>
         ))}
       </section>
+        {/* ÁLBUMES */}
+      <section id="albumes" style={{ padding: '2rem' }}>
+        <h2 style={{
+          fontSize: '20px',
+          fontWeight: '900',
+          background: 'var(--gradient-we)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          margin: '0 0 4px',
+        }}>
+          Álbumes
+        </h2>
+        <p style={{ fontSize: '13px', color: '#888', margin: '0 0 1.2rem' }}>
+          Fotos y vídeos de cada actividad
+        </p>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
+          gap: '12px',
+        }}>
+          {[
+            { name: 'WE Run', date: 'Ruta Cala Molins · Jun 2025', icon: '🏃‍♀️', count: '24 fotos · 3 vídeos', bg: 'linear-gradient(135deg, #FAD0C0, #F08060)' },
+            { name: 'WE Jump', date: 'Sesión Playa · May 2025', icon: '🤸‍♀️', count: '18 fotos · 2 vídeos', bg: 'linear-gradient(135deg, #F0D0F8, #D080E0)' },
+            { name: 'WE Hit', date: 'Funcional Parque · Abr 2025', icon: '🥊', count: '21 fotos · 1 vídeo', bg: 'linear-gradient(135deg, #FAE0C0, #F0A060)' },
+            { name: 'WE Ride', date: 'Volta Gavarres · Abr 2025', icon: '🚴‍♀️', count: '31 fotos · 2 vídeos', bg: 'linear-gradient(135deg, #FAF0EC, #F0C090)' },
+            { name: 'WE Swim', date: 'Cala Bona · Jun 2025', icon: '🏊‍♀️', count: '12 fotos', bg: 'linear-gradient(135deg, #C0E8F8, #60B0D8)' },
+          ].map((album) => (
+            <div key={album.name} style={{
+              background: '#fff',
+              borderRadius: 'var(--radius-md)',
+              border: '0.5px solid #e0e0e0',
+              overflow: 'hidden',
+              cursor: 'pointer',
+            }}>
+              {/* Thumbnail */}
+              <div style={{
+                height: '100px',
+                background: album.bg,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                position: 'relative',
+              }}>
+                <span style={{ fontSize: '40px' }}>{album.icon}</span>
+                <span style={{
+                  position: 'absolute',
+                  bottom: '6px',
+                  right: '8px',
+                  background: 'rgba(0,0,0,0.35)',
+                  color: '#fff',
+                  fontSize: '11px',
+                  fontWeight: '700',
+                  borderRadius: '20px',
+                  padding: '2px 8px',
+                }}>
+                  {album.count}
+                </span>
+              </div>
+              {/* Info */}
+              <div style={{ padding: '10px 12px' }}>
+                <p style={{
+                  fontSize: '13px',
+                  fontWeight: '700',
+                  fontStyle: 'italic',
+                  background: 'var(--gradient-we)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  margin: '0 0 2px',
+                }}>
+                  {album.name}
+                </p>
+                <p style={{ fontSize: '11px', color: '#888', margin: 0 }}>{album.date}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+          {/* TIENDAS */}
+      <section id="tiendas" style={{ padding: '2rem' }}>
+        <h2 style={{
+          fontSize: '20px',
+          fontWeight: '900',
+          background: 'var(--gradient-we)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          margin: '0 0 4px',
+        }}>
+          Tiendas colaboradoras
+        </h2>
+        <p style={{ fontSize: '13px', color: '#888', margin: '0 0 1.2rem' }}>
+          Descuentos exclusivos para miembros WE
+        </p>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+          gap: '10px',
+        }}>
+          {[
+            { name: 'SportLocal', type: 'Material deportivo', icon: '👟', disc: '10% dto.' },
+            { name: 'Natura Café', type: 'Nutrición · desayunos', icon: '🥗', disc: 'Café gratis' },
+            { name: 'Fisio Costa', type: 'Fisioterapia · recovery', icon: '💆‍♀️', disc: '15% dto.' },
+          ].map((shop) => (
+            <div key={shop.name} style={{
+              background: '#fff',
+              borderRadius: 'var(--radius-md)',
+              border: '0.5px solid #e0e0e0',
+              padding: '1rem',
+              textAlign: 'center',
+            }}>
+              <div style={{ fontSize: '24px', marginBottom: '6px' }}>{shop.icon}</div>
+              <p style={{ fontSize: '13px', fontWeight: '700', color: '#333', margin: '0 0 2px' }}>{shop.name}</p>
+              <p style={{ fontSize: '11px', color: '#888' }}>{shop.type}</p>
+              <span style={{
+                display: 'inline-block',
+                background: '#F0D0F8',
+                color: '#9030B0',
+                borderRadius: '20px',
+                fontSize: '11px',
+                fontWeight: '700',
+                padding: '2px 10px',
+                marginTop: '6px',
+              }}>
+                {shop.disc}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
       
     </main>
   )
