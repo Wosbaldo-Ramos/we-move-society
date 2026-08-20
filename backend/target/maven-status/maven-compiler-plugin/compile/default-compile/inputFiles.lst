@@ -1,1 +1,8 @@
 /workspaces/we-move-society/backend/src/main/java/com/wemove/backend/BackendApplication.java
+/workspaces/we-move-society/backend/src/main/java/com/wemove/backend/application/service/ActivityService.java
+/workspaces/we-move-society/backend/src/main/java/com/wemove/backend/domain/model/Activity.java
+/workspaces/we-move-society/backend/src/main/java/com/wemove/backend/domain/port/ActivityRepository.java
+/workspaces/we-move-society/backend/src/main/java/com/wemove/backend/infrastructure/adapter/in/web/ActivityController.java
+/workspaces/we-move-society/backend/src/main/java/com/wemove/backend/infrastructure/adapter/out/persistence/ActivityJpaRepository.java
+/workspaces/we-move-society/backend/src/main/java/com/wemove/backend/infrastructure/adapter/out/persistence/ActivityPersistenceAdapter.java
+/workspaces/we-move-society/backend/src/main/java/com/wemove/backend/infrastructure/entity/ActivityEntity.java

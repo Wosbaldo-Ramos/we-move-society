@@ -1,1 +1,8 @@
+com/wemove/backend/application/service/ActivityService.class
+com/wemove/backend/infrastructure/adapter/out/persistence/ActivityJpaRepository.class
+com/wemove/backend/infrastructure/adapter/out/persistence/ActivityPersistenceAdapter.class
+com/wemove/backend/domain/port/ActivityRepository.class
 com/wemove/backend/BackendApplication.class
+com/wemove/backend/infrastructure/adapter/in/web/ActivityController.class
+com/wemove/backend/infrastructure/entity/ActivityEntity.class
+com/wemove/backend/domain/model/Activity.class
