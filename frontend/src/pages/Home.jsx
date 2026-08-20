@@ -24,11 +24,12 @@ function Home() {
           overflow: 'hidden',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'space-between',
-          padding: '2px 0',
+          justifyContent: 'space-around',
+          gap: '8px',
+          padding: '0 4px',
           zIndex: 0,
         }}>
-          {[...Array(6)].map((_, rowIdx) => (
+          {[...Array(12)].map((_, rowIdx) => (
             <div key={rowIdx} style={{
               display: 'flex',
               justifyContent: 'space-between',
@@ -36,7 +37,7 @@ function Home() {
               padding: '0 4px',
               width: '100%',
             }}>
-              {[...Array(10)].map((_, colIdx) => {
+              {[...Array(18)].map((_, colIdx) => {
                 const fonts = [
                   { f: "'Bebas Neue', sans-serif", w: '400', s: 'normal', sz: 18 },
                   { f: "'Nunito', sans-serif", w: '900', s: 'italic', sz: 22 },
@@ -53,7 +54,7 @@ function Home() {
                     fontWeight: font.w,
                     fontStyle: font.s,
                     fontSize: `${font.sz}px`,
-                    color: '#F04040',
+                    color: '#F06090',
                     opacity: 0.16,
                     userSelect: 'none',
                   }}>
